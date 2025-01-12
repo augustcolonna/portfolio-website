@@ -1,0 +1,13 @@
+
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: true
+quoteProps: 'consistent'
+bracketSpacing: true
+braketSameLine: false
+arrowParens: 'always'
+vueIndentScriptAndStyle: true
+printWidth: 120
+htmlWhitespaceSensitivity: 'ignore'
+trailingComma: 'es5'
