@@ -17,10 +17,10 @@
 </script>
 
 <template>
-  <div class="fade-in h-full">
+  <div class="h-full">
     <main>
-      <section class="px-12 md:px-16 lg:px-48 xl:px-55 py-12">
-        <h2 class="text-5xl md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold z-10">
+      <section class="px-12 md:px-16 lg:px-48 xl:px-55 py-12 fade-in">
+        <h2 class="text-5xl md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold">
           I'm August,
           <br />
           <span
@@ -29,16 +29,54 @@
             a Software developer
           </span>
         </h2>
-        <p class="text-right text-3xl md:text-3xl lg:text-4xl xl:text-5xl pt-5">
-          I'm proficient in both back-end and front-end development, and am adept at working with various programming
-          languages and frameworks.
-        </p>
+
+        <div class="flex flex-row items-center">
+          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
+          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+            Proficient in both back-end and front-end development
+          </p>
+        </div>
+
+        <div class="flex flex-row items-center">
+          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
+          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+            Work with various programming languages and frameworks
+          </p>
+        </div>
+
+        <div class="flex flex-row items-center">
+          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
+          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+            Have an eye for design
+          </p>
+        </div>
+
+        <div class="flex flex-row items-center">
+          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
+          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+            Am willing to learn new technologies
+          </p>
+        </div>
+
+        <div class="flex flex-row items-center">
+          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
+          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
+            Constantly failing, learning, and growing
+          </p>
+        </div>
       </section>
 
-      <section class="flex flex-col items-center justify-center bg-accent tracking-wide">
-        <h2 class="text-2xl py-5 md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold text-center text-primary">
-          My Stack
-        </h2>
+      <section class="flex flex-col items-center justify-center bg-accent tracking-wide fade-in">
+        <div class="flex row items-center justify-center">
+          <div class="rounded-full bg-primary mr-0" style="width: 40px; height: 40px"></div>
+          <div class="bg-primary mr-4 ml-0" style="width: 40px; height: 5px"></div>
+          <h2 class="text-2xl py-5 md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold text-center text-primary">
+            My Stack
+          </h2>
+          <div class="bg-primary ml-4 mr-0" style="width: 40px; height: 5px"></div>
+          <div class="rounded-full bg-primary" style="width: 40px; height: 40px"></div>
+        </div>
+
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-8 md:px-16 lg:px-48 xl:px-55 py-12"
           style="width: 100%; height: 100%"
@@ -61,8 +99,16 @@
         </div>
       </section>
 
-      <section class="px-12 md:px-16 lg:px-48 xl:px-55 py-12">
-        <h2 class="text-2xl md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold text-center text-accent">What I do</h2>
+      <section class="px-12 md:px-16 lg:px-48 xl:px-55 py-12 fade-in">
+        <div class="flex row items-center justify-center">
+          <div class="rounded-full bg-accent mr-0" style="width: 40px; height: 40px"></div>
+          <div class="bg-accent mr-4 ml-0" style="width: 40px; height: 5px"></div>
+          <h2 class="text-2xl md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold text-center text-accent">
+            What I do
+          </h2>
+          <div class="bg-accent ml-4 mr-0" style="width: 40px; height: 5px"></div>
+          <div class="rounded-full bg-accent" style="width: 40px; height: 40px"></div>
+        </div>
         <div class="flex flex-col items-center">
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 px-8 md:px-16 lg:px-48 xl:px-55 py-12 cursor-cursor"
@@ -72,9 +118,9 @@
             >
               <h3 class="text-2xl font-bold">Front End</h3>
               <p class="text-center">
-                I am the sole Front end developer on my team, so my responsibilities are quite vast. I maintain all of
-                our front end code and manage multiple front end repositories, design and develop new UI's, update
-                documentation, and of course, squash bugs that come up.
+                I am the sole front end developer on my team - I maintain our front end code while also managing
+                multiple repositories, design and develop new UI's, update documentation, and of course, squash bugs
+                that come up.
               </p>
             </div>
             <div
@@ -82,8 +128,8 @@
             >
               <h3 class="text-2xl font-bold">Back End</h3>
               <p class="text-center">
-                I also do a fair amount of backend development, including building applications that require tie-ins to
-                our custom API's, and write back-end services that connect our applications to our hardware.
+                I also enjoy backend development, including building applications that require tie-ins to our custom
+                API's, and writing back-end services that connect our applications to our hardware and databases.
               </p>
             </div>
           </div>
@@ -91,7 +137,7 @@
       </section>
 
       <section>
-        <div class="flex flex-col items-center justify-center tracking-wide">
+        <div class="flex flex-col items-center justify-center tracking-wide fade-in">
           <h2 class="text-2xl py-5 md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold text-center text-accent">
             My Experience
           </h2>

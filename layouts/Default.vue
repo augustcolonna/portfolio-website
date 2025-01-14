@@ -8,6 +8,8 @@
       <slot />
     </main>
 
-    <Foot />
+    <footer class="sticky top-full flex flex-row items-center justify-center border-t-2 border-[#A4AC86]">
+      <Foot />
+    </footer>
   </div>
 </template>
