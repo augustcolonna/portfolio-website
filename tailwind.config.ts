@@ -10,6 +10,7 @@ export default {
         accent: '#656D4A',
         light: '#A68A64',
         darkGreen: '#414833',
+        burntBrownDarker: '#7f4f24',
       },
     },
   },
