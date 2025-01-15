@@ -19,62 +19,48 @@
 <template>
   <div class="h-full">
     <main>
-      <section class="px-12 md:px-16 lg:px-48 xl:px-55 py-12 fade-in">
-        <h2 class="text-5xl md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold">
-          I'm August,
-          <br />
-          <span
-            class="bg-gradient-to-r from-black to-darkGreen bg-clip-text text-transparent tracking-wide text-4xl md:text-5xl lg:text-[6rem] xl:text-[7rem]"
-          >
-            a Software developer
-          </span>
-        </h2>
-
-        <div class="flex flex-row items-center">
-          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
-          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-            Proficient in both back-end and front-end development
-          </p>
+      <section class="px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in xl:min-h-screen flex items-center">
+        <div class="flex flex-col xl:flex-row items-center justify-start bg-secondary rounded-xl py-4 px-4 w-full">
+          <img
+            class="h-30 w-30 md:h-60 md:w-60 lg:h-80 lg:w-80 xl:h-96 xl:w-96 bg-primary rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
+            src="/assets/images/profile.png"
+            alt="August"
+          />
+          <h2 class="text-5xl text-center xl:text-right xl:mx-30 font-bold">
+            I'm August,
+            <br />
+            <span
+              class="bg-gradient-to-r from-black to-darkGreen bg-clip-text text-transparent tracking-wide text-4xl md:text-5xl lg:text-[6rem] xl:text-[7rem]"
+            >
+              a Software developer
+            </span>
+          </h2>
         </div>
+      </section>
 
-        <div class="flex flex-row items-center">
-          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
-          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-            Work with various programming languages and frameworks
-          </p>
-        </div>
-
-        <div class="flex flex-row items-center">
-          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
-          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-            Have an eye for design
-          </p>
-        </div>
-
-        <div class="flex flex-row items-center">
-          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
-          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-            Am willing to learn new technologies
-          </p>
-        </div>
-
-        <div class="flex flex-row items-center">
-          <div class="rounded-full bg-burntBrownDarker mr-4 ml-0" style="width: 20px; height: 20px"></div>
-          <p class="text-left py-2 md:py-6 lg:py-8 xl:py-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">
-            Constantly failing, learning, and growing
+      <section
+        class="xl:min-h-screen flex flex-col items-center justify-center tracking-wide px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in"
+      >
+        <div class="flex flex-col tracking-wide bg-secondary rounded-xl py-4 px-4 mt-4">
+          <p class="text-left py-2 text-l font-bold">
+            Proficient in both back-end and front-end development.
+            <br />
+            Work with various programming languages and frameworks.
+            <br />
+            Have an eye for design.
+            <br />
+            Am willing to learn new technologies.
+            <br />
+            Constantly failing, learning, and growing.
           </p>
         </div>
       </section>
 
-      <section class="flex flex-col items-center justify-center bg-accent tracking-wide fade-in">
-        <div class="flex row items-center justify-center">
-          <div class="rounded-full bg-primary mr-0" style="width: 40px; height: 40px"></div>
-          <div class="bg-primary mr-4 ml-0" style="width: 40px; height: 5px"></div>
-          <h2 class="text-2xl py-5 md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold text-center text-primary">
-            My Stack
-          </h2>
-          <div class="bg-primary ml-4 mr-0" style="width: 40px; height: 5px"></div>
-          <div class="rounded-full bg-primary" style="width: 40px; height: 40px"></div>
+      <section
+        class="xl:min-h-screen flex flex-col items-center justify-center bg-accent tracking-wide fade-in px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in"
+      >
+        <div class="flex row items-center justify-center xl:justify-start" style="width: 100%">
+          <h2 class="text-5xl py-5 font-bold text-primary">My Stack</h2>
         </div>
 
         <div
@@ -99,15 +85,9 @@
         </div>
       </section>
 
-      <section class="px-12 md:px-16 lg:px-48 xl:px-55 py-12 fade-in">
-        <div class="flex row items-center justify-center">
-          <div class="rounded-full bg-accent mr-0" style="width: 40px; height: 40px"></div>
-          <div class="bg-accent mr-4 ml-0" style="width: 40px; height: 5px"></div>
-          <h2 class="text-2xl md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold text-center text-accent">
-            What I do
-          </h2>
-          <div class="bg-accent ml-4 mr-0" style="width: 40px; height: 5px"></div>
-          <div class="rounded-full bg-accent" style="width: 40px; height: 40px"></div>
+      <section class="xl:min-h-screen px-12 md:px-16 lg:px-48 xl:px-55 py-12 fade-in">
+        <div class="flex items-center justify-center xl:justify-start">
+          <h2 class="text-5xl py-5 font-bold text-accent">What I do</h2>
         </div>
         <div class="flex flex-col items-center">
           <div
@@ -147,10 +127,15 @@
   </div>
 </template>
 
-<style lang="css">
+<style lang="scss">
+  @use '/assets/style/colors.scss' as colors;
   .fade-in {
     animation: fade-in 1s;
   }
+
+  // .image-shadow {
+  //   box-shadow: 5px 5px 5px 0px colors.$accent;
+  // }
 
   @keyframes fade-in {
     from {
