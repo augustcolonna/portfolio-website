@@ -16,7 +16,7 @@
           active-class="bg-accent font-extrabold text-primary rounded-full px-5 py-3 hover:none"
           to="/contact"
         >
-          CONTACT
+          WORK WITH ME
         </NuxtLink>
       </li>
     </ul>

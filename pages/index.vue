@@ -14,45 +14,109 @@
   import CypressLogo from '/assets/images/cypress-svgrepo-com.svg';
   import GitLogo from '/assets/images/git-svgrepo-com.svg';
   import GitlabLogo from '/assets/images/gitlab-svgrepo-com.svg';
+
+  type Experience = {
+    location: string;
+    place: string;
+    date: string;
+    position: string;
+    summary: string;
+  };
+
+  const experience: Experience[] = [
+    {
+      location: 'Munich, Germany',
+      place: 'Kinexon',
+      date: '2021 - Present',
+      position: 'Software Engineer',
+      summary: 'Developing and maintaining software for the sports industry.',
+    },
+    {
+      location: 'Munich, Germany',
+      place: 'IronHack',
+      date: '2021',
+      position: 'Career Transition',
+      summary: 'Attended IronHack to transition into a software developer role.',
+    },
+    {
+      location: 'Lehi, Utah',
+      place: 'Podium and Shopmonkey',
+      date: '2019 - 2021',
+      position: 'Tech Sales',
+      summary: 'Worked in tech sales for Shopmonkey and Podium.',
+    },
+    {
+      location: 'Salt Lake City, Utah',
+      place: 'The University of Utah',
+      date: '2016 - 2021',
+      position: 'Student',
+      summary: 'Studied at the University of Utah.',
+    },
+  ];
+
+  const itemToShow = ref<Experience>(experience[0]);
+  const showSelected = (item: Experience) => {
+    if (itemToShow.value !== item) {
+      itemToShow.value = item;
+    } else {
+      itemToShow.value = experience[0];
+    }
+  };
 </script>
 
 <template>
   <div class="h-full">
     <main>
-      <section class="px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in xl:min-h-screen flex items-center">
-        <div class="flex flex-col xl:flex-row items-center justify-start bg-secondary rounded-xl py-4 px-4 w-full">
+      <section class="px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in xl:min-h-screen flex flex-col items-center">
+        <div class="flex flex-col xl:flex-row items-center bg-accent rounded-xl py-4 px-4">
           <img
-            class="h-30 w-30 md:h-60 md:w-60 lg:h-80 lg:w-80 xl:h-96 xl:w-96 bg-primary rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
+            class="h-30 w-30 md:h-60 md:w-60 lg:h-80 lg:w-80 xl:h-96 xl:w-96 bg-primary transition-transform duration-300 hover:scale-105 rounded-bl-full rounded-br-full rounded-tr-full"
             src="/assets/images/profile.png"
             alt="August"
           />
-          <h2 class="text-5xl text-center xl:text-right xl:mx-30 font-bold">
+
+          <h2 class="text-5xl text-center xl:text-right text-primary font-bold">
             I'm August,
             <br />
-            <span
-              class="bg-gradient-to-r from-black to-darkGreen bg-clip-text text-transparent tracking-wide text-4xl md:text-5xl lg:text-[6rem] xl:text-[7rem]"
-            >
+            <span class="text-secondary tracking-wide text-4xl md:text-5xl lg:text-[6rem] xl:text-[6rem]">
               a Software developer
             </span>
           </h2>
         </div>
-      </section>
 
-      <section
-        class="xl:min-h-screen flex flex-col items-center justify-center tracking-wide px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in"
-      >
-        <div class="flex flex-col tracking-wide bg-secondary rounded-xl py-4 px-4 mt-4">
-          <p class="text-left py-2 text-l font-bold">
-            Proficient in both back-end and front-end development.
-            <br />
-            Work with various programming languages and frameworks.
-            <br />
-            Have an eye for design.
-            <br />
-            Am willing to learn new technologies.
-            <br />
-            Constantly failing, learning, and growing.
-          </p>
+        <div class="grid grid-cols-1 xl:grid-cols-5 tracking-wide gap-4 py-4">
+          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
+            <p class="text-center xl:text-left text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+              Experience in back-end and front-end development
+            </p>
+            <img class="w-36 mx-auto" src="/assets/images/code-block-svgrepo-com.svg" alt="" />
+          </div>
+          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
+            <p class="text-center xl:text-left text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+              Have an eye for design and attention to
+              <br />
+              detail
+            </p>
+            <img class="w-36 mx-auto" src="/assets/images/eye-svgrepo-com.svg" alt="" />
+          </div>
+          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
+            <p class="text-center text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+              Desire for feedback to continuously improve my skills
+            </p>
+            <img class="w-36 mx-auto" src="/assets/images/comments-svgrepo-com.svg" alt="" />
+          </div>
+          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
+            <p class="text-center xl:text-right text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+              Constantly failing, learning, and growing
+            </p>
+            <img class="w-36 mx-auto" src="/assets/images/brain-10-svgrepo-com.svg" alt="" />
+          </div>
+          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
+            <p class="text-center xl:text-right text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+              Work with various programming languages and frameworks
+            </p>
+            <img class="w-36 mx-auto" src="/assets/images/stack1-svgrepo-com.svg" alt="" />
+          </div>
         </div>
       </section>
 
@@ -85,42 +149,37 @@
         </div>
       </section>
 
-      <section class="xl:min-h-screen px-12 md:px-16 lg:px-48 xl:px-55 py-12 fade-in">
-        <div class="flex items-center justify-center xl:justify-start">
-          <h2 class="text-5xl py-5 font-bold text-accent">What I do</h2>
+      <section
+        class="xl:min-h-screen flex flex-col items-center justify-center tracking-wide fade-in px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in"
+      >
+        <div class="flex row items-center justify-center xl:justify-start" style="width: 100%">
+          <h2 class="text-5xl py-5 font-bold text-accent">What and Where</h2>
         </div>
-        <div class="flex flex-col items-center">
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 px-8 md:px-16 lg:px-48 xl:px-55 py-12 cursor-cursor"
-          >
-            <div
-              class="flex flex-col items-center justify-start bg-accent rounded-lg p-5 hover:scale-105 hover:shadow-2xl transition-transform duration-300"
-            >
-              <h3 class="text-2xl font-bold">Front End</h3>
-              <p class="text-center">
-                I am the sole front end developer on my team - I maintain our front end code while also managing
-                multiple repositories, design and develop new UI's, update documentation, and of course, squash bugs
-                that come up.
-              </p>
-            </div>
-            <div
-              class="flex flex-col items-center justify-start bg-accent rounded-lg p-5 hover:scale-105 hover:shadow-2xl transition-transform duration-300"
-            >
-              <h3 class="text-2xl font-bold">Back End</h3>
-              <p class="text-center">
-                I also enjoy backend development, including building applications that require tie-ins to our custom
-                API's, and writing back-end services that connect our applications to our hardware and databases.
-              </p>
-            </div>
+        <div class="flex flex-column xl:flex-row bg-accent rounded-lg p-5">
+          <!-- Left: List -->
+          <div class="flex flex-row xl:flex-col items-center justify-center min-w-1/4">
+            <ul class="">
+              <li
+                v-for="item in experience"
+                :key="item.place"
+                class="py-4 px-4 bg-accent text-primary rounded-lg mb-4 hover:bg-primary hover:text-accent hover:cursor-pointer"
+                @click="showSelected(item)"
+              >
+                <h1 class="font-bold">{{ item.position }}</h1>
+                <h2>{{ item.place }}</h2>
+              </li>
+            </ul>
           </div>
-        </div>
-      </section>
 
-      <section>
-        <div class="flex flex-col items-center justify-center tracking-wide fade-in">
-          <h2 class="text-2xl py-5 md:text-6xl lg:text-[8rem] xl:text-[9rem] font-bold text-center text-accent">
-            My Experience
-          </h2>
+          <!-- Right: Experience Component -->
+          <div class="ml-4 min-w-3/4">
+            <Experience
+              :location="itemToShow.location"
+              :date="itemToShow.date"
+              :position="itemToShow.position"
+              :summary="itemToShow.summary"
+            />
+          </div>
         </div>
       </section>
     </main>
@@ -129,13 +188,35 @@
 
 <style lang="scss">
   @use '/assets/style/colors.scss' as colors;
+
+  .fade-in-sequence {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+  }
+
+  .fade-in-sequence:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  .fade-in-sequence:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  .fade-in-sequence:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  .fade-in-sequence:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+
+  .fade-in-sequence:nth-child(5) {
+    animation-delay: 1s;
+  }
+
   .fade-in {
     animation: fade-in 1s;
   }
-
-  // .image-shadow {
-  //   box-shadow: 5px 5px 5px 0px colors.$accent;
-  // }
 
   @keyframes fade-in {
     from {
