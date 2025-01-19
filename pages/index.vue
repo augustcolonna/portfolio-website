@@ -69,12 +69,18 @@
       itemToShow.value = experience[0];
     }
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 </script>
 
 <template>
   <div class="h-full">
     <main>
-      <section class="px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in xl:min-h-screen flex flex-col items-center">
+      <section
+        class="px-12 md:px-16 lg:px-48 xl:px-56 py-12 fade-in xl:min-h-screen flex flex-col items-center justify-center"
+      >
         <div class="flex flex-col xl:flex-row items-center bg-accent rounded-xl py-4 px-4">
           <img
             class="h-30 w-30 md:h-60 md:w-60 lg:h-80 lg:w-80 xl:h-96 xl:w-96 bg-primary transition-transform duration-300 hover:scale-105 rounded-bl-full rounded-br-full rounded-tr-full"
@@ -172,6 +178,20 @@
               :summary="itemToShow.summary"
             />
           </div>
+        </div>
+        <div class="flex flex-col items-end justify-end w-full mt-4">
+          <button
+            @click="scrollToTop"
+            class="bg-light text-primary p-3 m-2 rounded-full shadow-lg hover:bg-secondary transition duration-300"
+          >
+            Back to Top
+          </button>
+          <NuxtLink
+            to="/contact"
+            class="bg-light text-primary p-3 m-2 rounded-full shadow-lg hover:bg-secondary transition duration-300 text-center"
+          >
+            Work with me
+          </NuxtLink>
         </div>
       </section>
     </main>
