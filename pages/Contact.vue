@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { ref, watch, onMounted } from 'vue';
   import emailjs from 'emailjs-com';
+  import resume from '@/assets/images/resume.pdf';
 
   const emailSelected = ref<boolean>(false);
   const toggleEmailSelected = () => {
@@ -65,11 +66,11 @@
   });
 </script>
 <template>
-  <div class="contact-container flex flex-col xl:flex-row p-4 md:p-8 lg:p-12">
-    <div class="send-me-an-email border-b-2 xl:border-b-0 xl:border-r-2 border-light p-4 md:p-8 lg:p-12">
-      <button v-if="!emailSelected" @click="toggleEmailSelected">Send me an Email</button>
+  <div class="contact-container flex flex-col p-4 md:p-8 lg:p-12">
+    <div class="send-me-an-email p-4 md:p-8 lg:p-12">
+      <button class="btn" v-if="!emailSelected" @click="toggleEmailSelected">Send me an Email</button>
 
-      <form v-if="emailSelected === true" @submit.prevent="sendEmail" class="space-y-4">
+      <form v-if="emailSelected === true" @submit.prevent="sendEmail">
         <label for="name" class="block">
           Name
           <input v-model="name" placeholder="Your Name" required class="w-full p-2 border rounded-md" />
@@ -94,24 +95,45 @@
             class="w-full p-2 border rounded-md"
           ></textarea>
         </label>
-        <button v-if="!emailSent" type="submit">Send Email</button>
+        <button class="btn" v-if="!emailSent" type="submit">Send Email</button>
       </form>
 
       <p v-if="successMessage" class="text-green-500">{{ successMessage }}</p>
       <p v-if="errorMessage" class="text-red-500">{{ errorMessage }}</p>
     </div>
 
-    <div class="linkedin-connect p-4 md:p-8 lg:p-12">
-      <a href="https://www.linkedin.com/in/august-colonna" target="_blank">
+    <div class="linkedin-connect p-4 md:p-8 lg:p-12 border-b-2 border-t-2 border-light" style="width: 60%">
+      <a class="text-center" href="https://www.linkedin.com/in/august-colonna" target="_blank">
         <img class="w-10 h-10" src="/assets/images/linkedin-161-svgrepo-com.svg" alt="LinkedIn" />
         Connect with me
       </a>
     </div>
+    <a :href="resume" download="resume.pdf" class="p-4 md:p-8 lg:p-12">
+      <button class="btn w-full">Download my Resume</button>
+    </a>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
   @use '/assets/style/colors.scss' as colors;
+
+  .btn {
+    background-color: colors.$light-brown;
+    color: colors.$primary;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    color: black;
+    margin-bottom: 5px;
+
+    &:hover {
+      background-color: colors.$secondary;
+      color: colors.$primary;
+    }
+  }
 
   .contact-container {
     display: flex;
@@ -126,23 +148,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      button {
-        background-color: colors.$light-brown;
-        color: colors.$primary;
-        border: none;
-        padding: 10px 8px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1.2rem;
-        transition: background-color 0.3s;
-        color: black;
-
-        &:hover {
-          background-color: colors.$secondary;
-          color: colors.$primary;
-        }
-      }
 
       h1 {
         font-size: 2.5rem;
@@ -192,22 +197,6 @@
             resize: none;
           }
         }
-
-        button {
-          background-color: colors.$light-brown;
-          border: none;
-          padding: 10px 20px;
-          border-radius: 5px;
-          cursor: pointer;
-          font-size: 1.2rem;
-          transition: background-color 0.3s;
-          margin: 8px;
-
-          &:hover {
-            background-color: colors.$primary;
-            color: colors.$accent;
-          }
-        }
       }
     }
 
@@ -217,14 +206,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      // padding: 30px;
 
       a {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-decoration: none;
         transition: color 0.3s;
         background-color: colors.$light-brown;

@@ -31,7 +31,7 @@
       date: 'Feb 2024 - Present',
       position: 'Software Engineer',
       summary:
-        'Responsible for the front end development for the LPS team and back end development in the SensorNetwork. I have gained experience in learning complex relationships between our hardware and software applications, reading legacy code and applying refactors to reduce technical debt and promote clean and maintainable code, working within a team with various goals set per sprint, as well as developing brand new UIs to modernize existing applications.',
+        'Responsible for the front end development for the LPS team and back end development in the SensorNetwork. I have gained experience in learning complex relationships between our hardware and software applications, reading legacy code and applying refactors to reduce technical debt and promote clean and maintainable code, working within a team with various goals set, as well as developing brand new UIs to modernize existing applications.',
       stack: ['Vue', 'Typescript', 'Javascript', 'Python', 'Docker', 'PostgreSQL', 'Jest', 'Cypress', 'Git', 'Gitlab'],
     },
     {
