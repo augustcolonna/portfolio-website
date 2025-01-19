@@ -101,7 +101,7 @@
       <p v-if="errorMessage" class="text-red-500">{{ errorMessage }}</p>
     </div>
 
-    <div class="linkedin-connect">
+    <div class="linkedin-connect p-4 md:p-8 lg:p-12">
       <a href="https://www.linkedin.com/in/august-colonna" target="_blank">
         <img class="w-10 h-10" src="/assets/images/linkedin-161-svgrepo-com.svg" alt="LinkedIn" />
         Connect with me
@@ -119,7 +119,6 @@
     align-items: center;
     color: colors.$forest-green;
     animation: fade-in 1s;
-    min-height: 100vh;
 
     .send-me-an-email {
       width: 100%;
@@ -132,7 +131,7 @@
         background-color: colors.$light-brown;
         color: colors.$primary;
         border: none;
-        padding: 10px 20px;
+        padding: 10px 8px;
         border-radius: 5px;
         cursor: pointer;
         font-size: 1.2rem;
@@ -218,7 +217,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 30px;
+      // padding: 30px;
 
       a {
         display: flex;
@@ -229,7 +228,7 @@
         text-decoration: none;
         transition: color 0.3s;
         background-color: colors.$light-brown;
-        padding: 15px;
+        padding: 10px 8px;
         border-radius: 15px;
         color: black;
 

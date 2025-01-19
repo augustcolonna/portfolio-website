@@ -49,7 +49,7 @@
       date: 'May 2019 - Sept. 2022',
       position: 'Tech Sales',
       summary:
-        'Worked in tech sales for Shopmonkey and Podium. After earning a BS in Accounting and studying for the CPA exam, I decided that a career in accounting was not something that I was too passionate about. In Salt Lake City, there is no shortage of tech companies, and I was able to find a job quite quickly. I worked for Podium and Shopmonkey, two SaaS companies, and it was here that I was able to learn about the tech industry and the various roles within it. After several promotions, I still fet that I was not in the right place, and I decided to make a change. During my time at Shopmonkey, I worked closely with our product team, which really opened my eyes to the world of software development.',
+        'Worked in tech sales for Shopmonkey and Podium. After earning a BS in Accounting and studying for the CPA exam, I decided that a career in accounting was not something that I was too passionate about. In Salt Lake City, there is no shortage of tech companies, and I was able to find a job quite quickly. I worked for Podium and Shopmonkey, two SaaS companies, and it was here that I was able to learn about the tech industry and the various roles within it. After several promotions, I still felt that I was not in the right place, and I decided to make a change. During my time at Shopmonkey, I worked closely with our product team, which really opened my eyes to the world of software development.',
     },
     {
       location: 'Salt Lake City, Utah',
@@ -57,7 +57,7 @@
       date: 'Aug 2015 - May 2019',
       position: 'Student',
       summary:
-        'Studied at the University of Utah. As a student athelte, I maintained a 3.5 GPA and honor role status throughout my time at the U. It was here that I was initially introduced to programming, in the form of some intro to CS coursed. We ded some minor web development with CSS and HTML, as well as some programming on a Raspberry Pi. My time at the U was incredibly valuable, and I am grateful for the experiences that I had there.',
+        'Studied at the University of Utah. As a student athelte, I maintained a 3.5 GPA and honor role status throughout my time at the U. It was here that I was initially introduced to programming, in the form of some intro to CS coursed. We did some minor web development with CSS and HTML, as well as some programming on a Raspberry Pi. My time at the U was incredibly valuable, and I am grateful for the experiences that I had there.',
     },
   ];
 
@@ -81,13 +81,10 @@
             src="/assets/images/profile.png"
             alt="August"
           />
-
-          <h2 class="text-5xl text-center xl:text-right text-primary font-bold">
+          <h2 class="text-2xl text-center xl:text-left xl:ml-24 text-primary font-bold">
             I'm August,
             <br />
-            <span class="text-secondary tracking-wide text-4xl md:text-5xl lg:text-[6rem] xl:text-[6rem]">
-              a Software developer
-            </span>
+            <span class="text-secondary tracking-wide text-3xl md:text-4xl xl:text-6xl">a Software developer</span>
           </h2>
         </div>
 
@@ -100,7 +97,7 @@
           </div>
           <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
             <p class="text-center xl:text-center text-primary py-2 text-l font-bold py-4 px-4 mt-4">
-              Constantly failing, learning, and growing
+              Constantly learning, and growing as a developer
             </p>
             <img class="w-20 mx-auto" src="/assets/images/brain-10-svgrepo-com.svg" alt="" />
           </div>
@@ -158,7 +155,7 @@
             <ul
               v-for="item in experience"
               :key="item.place"
-              class="flex flex-col items-center justify-center text-primary hover:bg-primary hover:text-accent duration-500 rounded-lg p-3 md:p-5 mb-5 xl:mr-5 cursor-pointer"
+              class="flex flex-col items-start justify-start text-primary hover:bg-primary hover:text-accent duration-500 rounded-lg p-3 md:p-5 mb-5 xl:mr-5 cursor-pointer"
             >
               <li @click="showSelected(item)">
                 <h1 class="text-sm md:text-l xl:text-xl font-bold">{{ item.position }}</h1>

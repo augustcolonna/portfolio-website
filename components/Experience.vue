@@ -4,7 +4,6 @@
     date: string;
     position: string;
     summary: string;
-    stack: string[];
   }>();
 </script>
 
@@ -12,12 +11,12 @@
   <div class="fade-in flex flex-col items-center justify-center w-full px-4 md:px-8 lg:px-12">
     <div class="flex flex-row mt-4 xl:mt-10 w-full">
       <div class="flex flex-col justify-center w-full md:w-1/2">
-        <p class="text-primary md:text-left">When</p>
-        <h3 class="text-primary font-extrabold text-xl md:text-left">{{ props.date }}</h3>
+        <p class="text-primary text-sm xl:text-xl md:text-left">When</p>
+        <p class="text-primary font-extrabold text-sm xl:text-xl md:text-left">{{ props.date }}</p>
       </div>
       <div class="flex flex-col justify-center w-full md:w-1/2">
-        <p class="text-primary md:text-left">Where</p>
-        <h3 class="text-primary font-extrabold text-xl md:text-left">{{ props.location }}</h3>
+        <p class="text-primary text-sm xl:text-xl md:text-left">Where</p>
+        <p class="text-primary font-extrabold text-sm xl:text-xl md:text-left">{{ props.location }}</p>
       </div>
     </div>
 
