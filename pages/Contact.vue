@@ -2,15 +2,18 @@
   import { ref, watch, onMounted } from 'vue';
   import emailjs from 'emailjs-com';
 
-  const name = ref<string>('');
+  const emailSelected = ref<boolean>(false);
+  const toggleEmailSelected = () => {
+    emailSelected.value = !emailSelected.value;
+  };
+
   const userEmail = ref<string>('');
+  const name = ref<string>('');
   const message = ref<string>('');
 
   const successMessage = ref<string>('');
   const errorMessage = ref<string>('');
-
   const emailSent = ref<boolean>();
-
   const sendEmail = async () => {
     emailSent.value = false;
     const templateParams = {
@@ -61,31 +64,49 @@
     }
   });
 </script>
-
 <template>
-  <div class="contact-container">
-    <h1>Send me an email</h1>
+  <div class="contact-container flex flex-col xl:flex-row p-4 md:p-8 lg:p-12">
+    <div class="send-me-an-email border-b-2 xl:border-b-0 xl:border-r-2 border-light p-4 md:p-8 lg:p-12">
+      <button v-if="!emailSelected" @click="toggleEmailSelected">Send me an Email</button>
 
-    <form @submit.prevent="sendEmail">
-      <label for="name">
-        Name
-        <input v-model="name" placeholder="Your Name" required />
-      </label>
+      <form v-if="emailSelected === true" @submit.prevent="sendEmail" class="space-y-4">
+        <label for="name" class="block">
+          Name
+          <input v-model="name" placeholder="Your Name" required class="w-full p-2 border rounded-md" />
+        </label>
 
-      <label for="userEmail">
-        Email
-        <input v-model="userEmail" type="email" placeholder="Your Email" required />
-      </label>
+        <label for="userEmail" class="block">
+          Email
+          <input
+            v-model="userEmail"
+            type="email"
+            placeholder="Your Email"
+            required
+            class="w-full p-2 border rounded-md"
+          />
+        </label>
 
-      <label for="message">
-        Message
-        <textarea v-model="message" placeholder="Your Message" required></textarea>
-      </label>
-      <button v-if="!emailSent" type="submit">Send Email</button>
-    </form>
+        <label for="message" class="block">
+          <textarea
+            v-model="message"
+            placeholder="Your Message"
+            required
+            class="w-full p-2 border rounded-md"
+          ></textarea>
+        </label>
+        <button v-if="!emailSent" type="submit">Send Email</button>
+      </form>
 
-    <p v-if="successMessage">{{ successMessage }}</p>
-    <p v-if="errorMessage">{{ errorMessage }}</p>
+      <p v-if="successMessage" class="text-green-500">{{ successMessage }}</p>
+      <p v-if="errorMessage" class="text-red-500">{{ errorMessage }}</p>
+    </div>
+
+    <div class="linkedin-connect">
+      <a href="https://www.linkedin.com/in/august-colonna" target="_blank">
+        <img class="w-10 h-10" src="/assets/images/linkedin-161-svgrepo-com.svg" alt="LinkedIn" />
+        Connect with me
+      </a>
+    </div>
   </div>
 </template>
 
@@ -94,70 +115,21 @@
 
   .contact-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: colors.$forest-green;
     animation: fade-in 1s;
+    min-height: 100vh;
 
-    h1 {
-      font-size: 2.5rem;
-      margin: 15px;
-      font-weight: bold;
-    }
-
-    form {
+    .send-me-an-email {
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100%;
-
-      label {
-        font-size: 1.2rem;
-        margin: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        border-radius: 15px;
-
-        input {
-          background-color: colors.$accent;
-          margin: 15px;
-          border: none;
-          padding: 12px;
-          color: colors.$primary;
-          border-radius: 5px;
-          width: 300px;
-
-          &::placeholder {
-            color: colors.$primary;
-            text-align: center;
-          }
-        }
-
-        textarea {
-          background-color: colors.$accent;
-          margin: 15px;
-          border: none;
-          padding: 12px;
-          color: colors.$primary;
-          border-radius: 5px;
-          height: 200px;
-          width: 600px;
-          resize: none;
-
-          &::placeholder {
-            color: colors.$accent;
-            text-align: center;
-          }
-        }
-      }
 
       button {
-        background-color: colors.$accent;
+        background-color: colors.$light-brown;
         color: colors.$primary;
         border: none;
         padding: 10px 20px;
@@ -165,33 +137,109 @@
         cursor: pointer;
         font-size: 1.2rem;
         transition: background-color 0.3s;
+        color: black;
 
         &:hover {
           background-color: colors.$secondary;
-          color: black;
+          color: colors.$primary;
         }
       }
-    }
 
-    @media only screen and (max-width: 768px) {
-      .contact-container {
+      h1 {
+        font-size: 2.5rem;
+        margin: 15px;
+        font-weight: bold;
+      }
+
+      form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
         width: 100%;
-        color: colors.$primary;
-        animation: fade-in 0.8s;
-        margin: 0 auto;
+        border-radius: 12px;
+        padding: 5px;
+        background-color: rgba(colors.$accent, 0.2);
 
-        textarea {
-          background-color: colors.$accent;
-          margin-left: 15px;
-          margin-right: 15px;
-          height: 200px;
-          width: 40px;
+        label {
+          font-size: 1.2rem;
+          margin: 8px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 6px;
+          border-radius: 15px;
+          width: 100%;
+
+          input,
+          textarea {
+            background-color: rgba(colors.$primary, 0.75);
+            margin-left: 15px;
+            border: none;
+            padding: 12px;
+            color: colors.$accent;
+            border-radius: 5px;
+            flex-grow: 1;
+
+            &::placeholder {
+              color: colors.$accent;
+              text-align: center;
+            }
+          }
+
+          textarea {
+            height: 200px;
+            resize: none;
+          }
         }
+
+        button {
+          background-color: colors.$light-brown;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1.2rem;
+          transition: background-color 0.3s;
+          margin: 8px;
+
+          &:hover {
+            background-color: colors.$primary;
+            color: colors.$accent;
+          }
+        }
+      }
+    }
+
+    .linkedin-connect {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        text-decoration: none;
+        transition: color 0.3s;
+        background-color: colors.$light-brown;
+        padding: 15px;
+        border-radius: 15px;
+        color: black;
+
+        &:hover {
+          background-color: colors.$secondary;
+          color: colors.$primary;
+        }
+      }
+      img {
+        margin-right: 10px;
       }
     }
   }

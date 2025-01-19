@@ -12,7 +12,7 @@
       </li>
       <li>
         <NuxtLink
-          class="cursor-pointer rounded-full px-3 py-3 hover:bg-secondary hover:bg-opacity-75 duration-500"
+          class="cursor-pointer rounded-full bg-light px-3 py-3 hover:bg-secondary hover:bg-opacity-75 duration-500"
           active-class="bg-accent font-extrabold text-primary rounded-full px-5 py-3 hover:none"
           to="/contact"
         >

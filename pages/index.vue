@@ -21,36 +21,43 @@
     date: string;
     position: string;
     summary: string;
+    stack?: string[];
   };
 
   const experience: Experience[] = [
     {
       location: 'Munich, Germany',
       place: 'Kinexon',
-      date: '2021 - Present',
+      date: 'Feb 2024 - Present',
       position: 'Software Engineer',
-      summary: 'Developing and maintaining software for the sports industry.',
+      summary:
+        'Responsible for the front end development for the LPS team and back end development in the SensorNetwork. I have gained experience in learning complex relationships between our hardware and software applications, reading legacy code and applying refactors to reduce technical debt and promote clean and maintainable code, working within a team with various goals set per sprint, as well as developing brand new UIs to modernize existing applications.',
+      stack: ['Vue', 'Typescript', 'Javascript', 'Python', 'Docker', 'PostgreSQL', 'Jest', 'Cypress', 'Git', 'Gitlab'],
     },
     {
-      location: 'Munich, Germany',
+      location: 'Garmisch-Pa., Germany',
       place: 'IronHack',
-      date: '2021',
+      date: ' June 2022 - Feb 2024',
       position: 'Career Transition',
-      summary: 'Attended IronHack to transition into a software developer role.',
-    },
-    {
-      location: 'Lehi, Utah',
-      place: 'Podium and Shopmonkey',
-      date: '2019 - 2021',
-      position: 'Tech Sales',
-      summary: 'Worked in tech sales for Shopmonkey and Podium.',
+      summary:
+        'Began learning how to code on my own in 2022 while working as a tech sales rep. In the fall my wife and I moved to Germany, which allowed me put all of my time and resources into learning. I attended IronHack Coding Bootcamp  in the spring of 2023, and it is here that I truly understood the passion that I have for software development. In addition to the bootcamp, I continued to study and teach myself through various mediums, which ultimately led to my success in finding a job.',
+      stack: ['React', 'Node.js', 'Express', 'Javascript', 'CSS', 'Git'],
     },
     {
       location: 'Salt Lake City, Utah',
-      place: 'The University of Utah',
-      date: '2016 - 2021',
+      place: 'Podium and Shopmonkey',
+      date: 'May 2019 - Sept. 2022',
+      position: 'Tech Sales',
+      summary:
+        'Worked in tech sales for Shopmonkey and Podium. After earning a BS in Accounting and studying for the CPA exam, I decided that a career in accounting was not something that I was too passionate about. In Salt Lake City, there is no shortage of tech companies, and I was able to find a job quite quickly. I worked for Podium and Shopmonkey, two SaaS companies, and it was here that I was able to learn about the tech industry and the various roles within it. After several promotions, I still fet that I was not in the right place, and I decided to make a change. During my time at Shopmonkey, I worked closely with our product team, which really opened my eyes to the world of software development.',
+    },
+    {
+      location: 'Salt Lake City, Utah',
+      place: 'University of Utah',
+      date: 'Aug 2015 - May 2019',
       position: 'Student',
-      summary: 'Studied at the University of Utah.',
+      summary:
+        'Studied at the University of Utah. As a student athelte, I maintained a 3.5 GPA and honor role status throughout my time at the U. It was here that I was initially introduced to programming, in the form of some intro to CS coursed. We ded some minor web development with CSS and HTML, as well as some programming on a Raspberry Pi. My time at the U was incredibly valuable, and I am grateful for the experiences that I had there.',
     },
   ];
 
@@ -84,38 +91,24 @@
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 xl:grid-cols-5 tracking-wide gap-4 py-4">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 py-4">
           <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
             <p class="text-center xl:text-left text-primary py-2 text-l font-bold py-4 px-4 mt-4">
               Experience in back-end and front-end development
             </p>
-            <img class="w-36 mx-auto" src="/assets/images/code-block-svgrepo-com.svg" alt="" />
+            <img class="w-20 mx-auto" src="/assets/images/code-block-svgrepo-com.svg" alt="" />
           </div>
           <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
-            <p class="text-center xl:text-left text-primary py-2 text-l font-bold py-4 px-4 mt-4">
-              Have an eye for design and attention to
-              <br />
-              detail
-            </p>
-            <img class="w-36 mx-auto" src="/assets/images/eye-svgrepo-com.svg" alt="" />
-          </div>
-          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
-            <p class="text-center text-primary py-2 text-l font-bold py-4 px-4 mt-4">
-              Desire for feedback to continuously improve my skills
-            </p>
-            <img class="w-36 mx-auto" src="/assets/images/comments-svgrepo-com.svg" alt="" />
-          </div>
-          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
-            <p class="text-center xl:text-right text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+            <p class="text-center xl:text-center text-primary py-2 text-l font-bold py-4 px-4 mt-4">
               Constantly failing, learning, and growing
             </p>
-            <img class="w-36 mx-auto" src="/assets/images/brain-10-svgrepo-com.svg" alt="" />
+            <img class="w-20 mx-auto" src="/assets/images/brain-10-svgrepo-com.svg" alt="" />
           </div>
           <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
             <p class="text-center xl:text-right text-primary py-2 text-l font-bold py-4 px-4 mt-4">
               Work with various programming languages and frameworks
             </p>
-            <img class="w-36 mx-auto" src="/assets/images/stack1-svgrepo-com.svg" alt="" />
+            <img class="w-20 mx-auto" src="/assets/images/stack1-svgrepo-com.svg" alt="" />
           </div>
         </div>
       </section>
@@ -150,29 +143,31 @@
       </section>
 
       <section
-        class="xl:min-h-screen flex flex-col items-center justify-center tracking-wide fade-in px-12 md:px-16 lg:px-48 xl:px-60 py-12 fade-in"
+        class="min-h-screen flex flex-col items-center justify-center tracking-wide fade-in px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-12"
       >
         <div class="flex row items-center justify-center xl:justify-start" style="width: 100%">
-          <h2 class="text-5xl py-5 font-bold text-accent">What and Where</h2>
+          <h2 class="text-5xl py-5 font-bold text-accent">What, When and Where</h2>
         </div>
-        <div class="flex flex-column xl:flex-row bg-accent rounded-lg p-5">
-          <!-- Left: List -->
-          <div class="flex flex-row xl:flex-col items-center justify-center min-w-1/4">
-            <ul class="">
-              <li
-                v-for="item in experience"
-                :key="item.place"
-                class="py-4 px-4 bg-accent text-primary rounded-lg mb-4 hover:bg-primary hover:text-accent hover:cursor-pointer"
-                @click="showSelected(item)"
-              >
-                <h1 class="font-bold">{{ item.position }}</h1>
-                <h2>{{ item.place }}</h2>
+
+        <div
+          class="flex flex-col xl:flex-row bg-accent rounded-lg p-5 w-full max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
+        >
+          <div
+            class="flex flex-row xl:flex-col items-center justify-evenly border-b-2 xl:border-r-2 xl:border-b-0 border-primary flex-wrap"
+          >
+            <ul
+              v-for="item in experience"
+              :key="item.place"
+              class="flex flex-col items-center justify-center text-primary hover:bg-primary hover:text-accent duration-500 rounded-lg p-3 md:p-5 mb-5 xl:mr-5 cursor-pointer"
+            >
+              <li @click="showSelected(item)">
+                <h1 class="text-sm md:text-l xl:text-xl font-bold">{{ item.position }}</h1>
+                <h2 class="text-xs md:text-m xl:text-l">{{ item.place }}</h2>
               </li>
             </ul>
           </div>
 
-          <!-- Right: Experience Component -->
-          <div class="ml-4 min-w-3/4">
+          <div class="ml-4 p-5 rounded-lg">
             <Experience
               :location="itemToShow.location"
               :date="itemToShow.date"
