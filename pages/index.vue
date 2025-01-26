@@ -101,11 +101,11 @@
             >
               Experience in back-end and front-end development
             </p>
-            <img class="w-20 mx-auto" src="/assets/images/code-block-svgrepo-com.svg" alt="" />
+            <img class="w-20 mx-auto" src="/assets/images/code-svgrepo-com.svg" alt="" />
           </div>
           <div class="flex flex-row items-center justify-center p-5 fade-in-sequence">
             <p
-              class="text-center xl:text-center text-accent py-2 border-l-2 border-accent text-l font-bold py-4 px-4 mt-4"
+              class="text-center xl:text-left text-accent py-2 border-l-2 border-accent text-l font-bold py-4 px-4 mt-4"
             >
               Constantly learning, and growing as a developer
             </p>
@@ -113,11 +113,11 @@
           </div>
           <div class="flex flex-row items-center justify-center p-5 fade-in-sequence">
             <p
-              class="text-center xl:text-right text-accent py-2 border-l-2 border-accent text-l font-bold py-4 px-4 mt-4"
+              class="text-center xl:text-left text-accent py-2 border-l-2 border-accent text-l font-bold py-4 px-4 mt-4"
             >
               Work with various programming languages and frameworks
             </p>
-            <img class="w-20 mx-auto" src="/assets/images/stack1-svgrepo-com.svg" alt="" />
+            <img class="w-20 mx-auto" src="/assets/images/layers-svgrepo-com.svg" alt="" />
           </div>
         </div>
       </section>
@@ -130,7 +130,7 @@
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 border-l-2 px-8 md:px-16 lg:px-48 xl:px-55 py-12"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-8 md:px-16 lg:px-48 xl:px-55 py-12"
           style="width: 100%; height: 100%"
         >
           <StackContainer :path="VueLogo" stack="Vue" />
@@ -155,28 +155,26 @@
         class="min-h-screen flex flex-col items-center justify-center tracking-wide fade-in px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 py-12"
       >
         <div class="flex row items-center justify-center xl:justify-start" style="width: 100%">
-          <h2 class="text-5xl py-5 font-bold text-accent">What, When and Where</h2>
+          <h2 class="text-5xl text-center xl:text-left py-5 font-bold text-accent">What, When and Where</h2>
         </div>
 
         <div
           class="flex flex-col xl:flex-row rounded-lg p-5 w-full max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
         >
-          <div
-            class="flex flex-row xl:flex-col items-center justify-evenly border-b-2 xl:border-r-2 xl:border-b-0 border-accent flex-wrap"
-          >
+          <div class="flex flex-col items-center justify-center xl:items-start justify-evenly flex-wrap">
             <ul
               v-for="item in experience"
               :key="item.place"
-              class="flex flex-col items-start justify-start text-accent hover:bg-accent hover:text-primary duration-500 rounded-lg p-3 md:p-5 mb-5 xl:mr-5 cursor-pointer"
+              class="flex flex-col items-center justify-center text-center xl:items-start text-accent hover:bg-secondary hover:text-primary duration-500 rounded-lg p-3 md:p-5 mb-5 xl:mr-5 cursor-pointer w-full"
             >
-              <li @click="showSelected(item)">
+              <li @click="showSelected(item)" class="w-full">
                 <h1 class="text-sm md:text-l xl:text-xl font-bold">{{ item.position }}</h1>
                 <h2 class="text-xs md:text-m xl:text-l">{{ item.place }}</h2>
               </li>
             </ul>
           </div>
 
-          <div class="ml-4 p-5 rounded-lg">
+          <div>
             <Experience
               :location="itemToShow.location"
               :date="itemToShow.date"
