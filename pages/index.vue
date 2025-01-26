@@ -81,34 +81,40 @@
       <section
         class="px-12 md:px-16 lg:px-48 xl:px-56 py-12 fade-in xl:min-h-screen flex flex-col items-center justify-center"
       >
-        <div class="flex flex-col xl:flex-row items-center bg-accent rounded-xl py-4 px-4">
+        <div class="flex flex-col xl:flex-row items-center rounded-xl py-4 px-4">
           <img
-            class="h-30 w-30 md:h-60 md:w-60 lg:h-80 lg:w-80 xl:h-96 xl:w-96 bg-primary transition-transform duration-300 hover:scale-105 rounded-bl-full rounded-br-full rounded-tr-full"
+            class="h-30 w-30 md:h-60 md:w-60 lg:h-80 lg:w-80 xl:h-96 xl:w-96 bg-accent transition-transform duration-300 hover:scale-105 rounded-bl-full rounded-br-full rounded-tr-full"
             src="/assets/images/profile.png"
             alt="August"
           />
-          <h2 class="text-2xl text-center xl:text-left xl:ml-24 text-primary font-bold">
+          <h2 class="text-2xl text-center xl:text-left xl:ml-24 text-accent font-bold">
             I'm August,
             <br />
-            <span class="text-secondary tracking-wide text-3xl md:text-4xl xl:text-6xl">a Software developer</span>
+            <span class="text-accent tracking-wide text-3xl md:text-4xl xl:text-6xl">a Software developer</span>
           </h2>
         </div>
 
         <div class="grid grid-cols-1 xl:grid-cols-3 gap-4 py-4">
-          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
-            <p class="text-center xl:text-left text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+          <div class="flex flex-row items-center justify-center p-5 fade-in-sequence">
+            <p
+              class="text-center xl:text-left text-accent py-2 border-l-2 border-accent text-l font-bold py-4 px-4 mt-4"
+            >
               Experience in back-end and front-end development
             </p>
             <img class="w-20 mx-auto" src="/assets/images/code-block-svgrepo-com.svg" alt="" />
           </div>
-          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
-            <p class="text-center xl:text-center text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+          <div class="flex flex-row items-center justify-center p-5 fade-in-sequence">
+            <p
+              class="text-center xl:text-center text-accent py-2 border-l-2 border-accent text-l font-bold py-4 px-4 mt-4"
+            >
               Constantly learning, and growing as a developer
             </p>
             <img class="w-20 mx-auto" src="/assets/images/brain-10-svgrepo-com.svg" alt="" />
           </div>
-          <div class="flex flex-col items-center justify-center bg-accent rounded-lg p-5 fade-in-sequence">
-            <p class="text-center xl:text-right text-primary py-2 text-l font-bold py-4 px-4 mt-4">
+          <div class="flex flex-row items-center justify-center p-5 fade-in-sequence">
+            <p
+              class="text-center xl:text-right text-accent py-2 border-l-2 border-accent text-l font-bold py-4 px-4 mt-4"
+            >
               Work with various programming languages and frameworks
             </p>
             <img class="w-20 mx-auto" src="/assets/images/stack1-svgrepo-com.svg" alt="" />
@@ -124,7 +130,7 @@
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 px-8 md:px-16 lg:px-48 xl:px-55 py-12"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 border-l-2 px-8 md:px-16 lg:px-48 xl:px-55 py-12"
           style="width: 100%; height: 100%"
         >
           <StackContainer :path="VueLogo" stack="Vue" />
@@ -153,15 +159,15 @@
         </div>
 
         <div
-          class="flex flex-col xl:flex-row bg-accent rounded-lg p-5 w-full max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
+          class="flex flex-col xl:flex-row rounded-lg p-5 w-full max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
         >
           <div
-            class="flex flex-row xl:flex-col items-center justify-evenly border-b-2 xl:border-r-2 xl:border-b-0 border-primary flex-wrap"
+            class="flex flex-row xl:flex-col items-center justify-evenly border-b-2 xl:border-r-2 xl:border-b-0 border-accent flex-wrap"
           >
             <ul
               v-for="item in experience"
               :key="item.place"
-              class="flex flex-col items-start justify-start text-primary hover:bg-primary hover:text-accent duration-500 rounded-lg p-3 md:p-5 mb-5 xl:mr-5 cursor-pointer"
+              class="flex flex-col items-start justify-start text-accent hover:bg-accent hover:text-primary duration-500 rounded-lg p-3 md:p-5 mb-5 xl:mr-5 cursor-pointer"
             >
               <li @click="showSelected(item)">
                 <h1 class="text-sm md:text-l xl:text-xl font-bold">{{ item.position }}</h1>
